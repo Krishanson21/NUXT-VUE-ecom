@@ -1,12 +1,16 @@
+/* ==========================================================
+   🏠 INDEX CATALOG MAIN LAYOUT & CORE SECTIONS
+   ========================================================== */
+
 .homepage-main {
     overflow-x: hidden;
 }
 
+/* Flex layout structures */
 .hero-section {
     display: flex;
     gap: 45px;
     margin-bottom: 60px;
-
 }
 
 .sidebar {
@@ -16,10 +20,10 @@
 }
 
 .sidebar li {
-    margin-bottom: 16px;
     list-style: none;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 16px;
     padding-right: 15px;
 }
 
@@ -32,6 +36,15 @@
     align-items: center;
 }
 
+.hero-phone-img {
+    width: 100%;
+    max-width: 892px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Base Sections Layout */
 .section-container {
     margin-top: 80px;
     padding-bottom: 60px;
@@ -49,47 +62,6 @@
     line-height: 1;
 }
 
-.countdown {
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.img-wrapper {
-    background-color: #F5F5F5;
-    height: 250px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: 4px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.hero-phone-img {
-    width: 100%;
-    max-width: 892px;
-    height: auto;
-    object-fit: contain;
-    display: block;
-}
-
-.img-wrapper:hover .add-to-cart-btn {
-    display: block;
-}
-
-.mock-item-art {
-    font-size: 80px;
-}
-
 .section-header-row {
     display: flex;
     align-items: flex-end;
@@ -99,29 +71,7 @@
     margin-bottom: 40px;
 }
 
-.discount-badge {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background-color: #DB4444;
-    color: #FFFFFF;
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    padding: 4px 12px;
-    border-radius: 4px;
-    z-index: 3;
-}
-
-.product-item-img {
-    max-width: 172px;
-    max-height: 152px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-}
-
+/* Countdown Clock Module */
 .countdown-clock {
     display: flex;
     align-items: flex-end;
@@ -164,6 +114,7 @@
     padding-bottom: 2px;
 }
 
+/* Slider Controls & Global Actions */
 .slider-arrows {
     display: flex;
     gap: 8px;
@@ -175,6 +126,81 @@
     border: none;
     border-radius: 65%;
     padding: 12px;
+}
+
+.center-btn-wrapper {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.boombox-img {
+    width: 100%;
+    max-width: 1170px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* ==========================================================
+   📦 RESTORED & HUMANIZED PRODUCT CARD CORE LAYOUTS
+   ========================================================== */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.img-wrapper {
+    background-color: #F5F5F5;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-item-img {
+    max-width: 172px;
+    max-height: 152px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.img-wrapper:hover .add-to-cart-btn {
+    display: block;
+}
+
+.add-to-cart-btn {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #DB4444;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 4px 12px;
+    border-radius: 4px;
+    z-index: 3;
 }
 
 .card-icons {
@@ -192,26 +218,6 @@
     border-radius: 50%;
     font-size: 14px;
     cursor: pointer;
-}
-
-.add-to-cart-btn {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: #000;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.boombox-img {
-    width: 100%;
-    max-width: 1170px;
-    height: auto;
-    object-fit: contain;
-    display: block;
 }
 
 .card-details {
@@ -240,10 +246,9 @@
     font-size: 14px;
 }
 
-.center-btn-wrapper {
-    text-align: center;
-    margin-top: 60px;
-}
+/* ==========================================================
+   🗂️ CATEGORY BOXES & FEATURED MOSAIC ARRIVALS
+   ========================================================== */
 
 .categories-grid {
     display: grid;
@@ -267,10 +272,6 @@
     box-sizing: border-box;
 }
 
-.category-box i {
-    font-size: 40px;
-}
-
 .category-box.active,
 .category-box:hover {
     background: var(--primary);
@@ -278,8 +279,6 @@
     border-color: var(--primary);
 }
 
-
-/* THis isthe arival section using mosaic grid methode  */
 .arrival-mosaic-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -288,14 +287,12 @@
     margin-top: 30px;
 }
 
-
 .mosaic-large {
     position: relative;
     height: 600px;
     border-radius: 4px;
     overflow: hidden;
 }
-
 
 .mosaic-right-split {
     display: flex;
@@ -304,14 +301,12 @@
     height: 600px;
 }
 
-
 .mosaic-wide {
     position: relative;
     height: 285px;
     border-radius: 4px;
     overflow: hidden;
 }
-
 
 .mosaic-double-box {
     display: grid;
@@ -320,14 +315,12 @@
     height: 285px;
 }
 
-
 .mosaic-small {
     position: relative;
     height: 100%;
     border-radius: 4px;
     overflow: hidden;
 }
-
 
 .bg-black {
     background-color: #000000;
@@ -348,50 +341,7 @@
     margin: 20px auto 0 auto;
 }
 
-
-.mosaic-text {
-    position: absolute;
-    bottom: 24px;
-    left: 24px;
-    color: #FFFFFF;
-    z-index: 2;
-}
-
-.mosaic-text h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    letter-spacing: 0.03em;
-}
-
-.mosaic-text p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 16px;
-    max-width: 242px;
-    line-height: 21px;
-    color: #F5F5F5;
-}
-
-.mosaic-text a {
-    color: #FFFFFF;
-    font-weight: 500;
-    text-decoration: underline;
-    font-size: 16px;
-}
-
-.mosaic-text.mini h3 {
-    font-size: 20px;
-    margin-bottom: 4px;
-}
-
-.mosaic-text.mini p {
-    font-size: 12px;
-    margin-bottom: 8px;
-}
-
+/* Service Propositions Bar */
 .value-propositions-bar {
     width: 100%;
     display: flex;
@@ -432,7 +382,9 @@
     line-height: 21px;
 }
 
-
+/* ==========================================================
+   📱 RESPONSIVE LAYOUT CONTEXTS (Humanized Properties)
+   ========================================================== */
 
 @media (max-width: 1024px) {
     .hero-section {
@@ -509,20 +461,11 @@
         padding: 0px;
     }
 
-    .hero-text h2 {
-        font-size: 32px;
-        line-height: 40px;
-    }
-
     .promo-music-section {
         flex-direction: column;
         padding: 0px;
         text-align: center;
         gap: 40px;
-    }
-
-    .promo-countdown {
-        justify-content: center;
     }
 
     .value-propositions-bar {
@@ -531,7 +474,6 @@
         margin-top: 80px;
     }
 }
-
 
 @media (max-width: 480px) {
     .products-grid {

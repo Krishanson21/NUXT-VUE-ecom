@@ -3,7 +3,7 @@
     <div class="auth-banner">
       <img 
         src="/images/s1.png" 
-        alt="A smartphone next to a shopping cart with shopping bags" 
+        alt="side nanner img" 
         class="side-banner-image"
       />
     </div>
